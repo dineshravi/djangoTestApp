@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+ 	<title>Edit Post</title>
+ 	
+ </head>
+ <body>
+ 	<h1>The Edit Post page</h1>
+
+
+	<form  action="/update/post{{post.id}}/" method="post" class="form-inline" Style="margin-top:.4em;">  {% csrf_token %}
+	     {{form.as_p}}
+	    <button type="submit" class="btn">Update</button>
+	</form>  
+
+ </body
+</html>
+

@@ -1,0 +1,20 @@
+	
+<!DOCTYPE html>
+
+<html>
+ <head>
+ 	<title>Create Post</title>
+ 	
+ </head>
+ <body>
+ 	<h1>The Create Post page</h1>
+
+
+	<form  action="/submit/" method="post" class="form-inline" Style="margin-top:.4em;">  {% csrf_token %}
+	     {{form.as_p}}
+	    <button type="submit" class="btn">Submit</button>
+	</form>  
+
+ </body
+</html>
+

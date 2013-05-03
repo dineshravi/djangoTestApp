@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+ 	<title>Index</title>
+ 	
+ </head>
+ <body>
+ 	<h1>The landing Page</h1>
+	
+	<table>
+	<tr>
+	    <th>User Mode:</th>
+	    <th>{{status}}</th>
+	</tr>
+	</table>
+
+	<form action="/login/" method="post" class="form-inline" Style="margin-top:.4em;"> {% csrf_token %}
+	   {{form.as_p}}
+	    <button type="submit" class="btn">Sign in</button>
+ 	</form>  
+	
+	</br>
+	<a href="/create/">Create New Post</a>  	
+	</br>	
+
+	<ul>
+	{% for post in post_list.all %}
+	    <p><li>{{ post.id }} {{ post.title }}    <a href="/edit/post{{post.id}}/">edit</a>
+               		  			     <a href="/delete/post{{post.id}}/">delete</a> </br>
+		{{ post.content }}
+	       </li>
+	    </p>
+	{% endfor %}
+	</ul>
+	<a href = "/logout/">logout</a>
+ </body
+</html>
